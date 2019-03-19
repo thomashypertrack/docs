@@ -24,7 +24,7 @@ Your endpoint implementation must retrieve the SubscribeURL value from the subsc
 
 ### Step 3: Processing Live Location on Webhook Payload
 
-Once you have confirmed the registration URL above, you will see payload POST body:
+Once you have confirmed the registration URL above, you will see payload in POST body:
 
 ```
 [{
