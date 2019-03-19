@@ -62,5 +62,5 @@ From the payload above, the application content in stored in the `Message` to be
 ```
 ### Conclusion
 
-Once you complete steps above, you will be getting Live Location on Webhook location change events for each device that belongs to you account. 
+Once you complete steps above, you will be getting Live Location on Webhook location change events sent to your HTTPS endpoint for each device that belongs to you account. 
 
