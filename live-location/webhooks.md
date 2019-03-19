@@ -26,6 +26,15 @@ Your endpoint implementation must retrieve the SubscribeURL value from the subsc
 
 Once you have confirmed the registration URL above, you will see payload that is delivered like this:
 
-`{\n "Type" : "Notification",\n "MessageId" : "19f653e6-4a81-5c32-80c1-06ec44b77ffc",\n "TopicArn" : "arn:aws:sns:us-west-2:203867187697:78f6fd85-0989-4907-8db2-22688dd32c15",\n "Message" : "{\\"recorded_at\\": \\"2019-02-27T22:50:24.538000Z\\", \\"data\\": {\\"altitude\\": 495.2, \\"bearing\\": 90.0, \\"location\\": {\\"coordinates\\": [-6.2755, 57.6398983], \\"type\\": \\"Point\\"}, \\"location_accuracy\\": 14.087, \\"speed\\": 0.0}, \\"device_id\\": \\"ABCDEFG-SASHA-TEST-DEVICE-ID\\", \\"type\\": \\"location\\", \\"account_id\\": \\"1\\"}",\n "Timestamp" : "2019-03-18T21:21:58.501Z",\n "SignatureVersion" : "1",\n "Signature" : "Ez/O7e3AaxOvK5Pgi/KSUW60UPOV2t7xY9vdWkaJlUd0CTdCnEmsFGN+Iw6F/OIXuAb+qEemCy0py6qUMwqw8/AU3cY8quco1Ksc4MYFdkdTAv0MjPnwgFR2i8ziaNF/d4cpyUChgKsaiscg2yoDOkf5C0WhMzhVp+jkKjRYpvgpJb2xOCUTLuWvmKRooqxKo58pYak2KzSbTGbbIaGmLNJjR5HSOLZntGT7c51WS5l4kAuWNxJ1p2nad5SLbP76FDg1GTRWKSMxl5Sn1KWKcDspiKlXvMlnSIF/kZl2YDwXucLU+C69nZopgrnUc3+6AXIEZiOC/fCzJ+SDIf9n3w==",\n "SigningCertURL" : "https://sns.us-west-2.amazonaws.com/SimpleNotificationService-6aad65c2f9911b05cd53efda11f913f9.pem",\n "UnsubscribeURL" : "https://sns.us-west-2.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-west-2:203867187697:78f6fd85-0989-4907-8db2-22688dd32c15:180ab837-4f51-475b-bb99-2d870eb32221"\n}`
+```{
+"Type" : "Notification", 
+"MessageId" : "19f653e6-4a81-5c32-80c1-06ec44b77ffc",
+"TopicArn" : "arn:aws:sns:us-west-2:203867187697:78f6fd85-0989-4907-8db2-22688dd32c15",
+"Message" : "{\\"recorded_at\\": \\"2019-02-27T22:50:24.538000Z\\", \\"data\\": {\\"altitude\\": 495.2, \\"bearing\\": 90.0, \\"location\\": {\\"coordinates\\": [-6.2755, 57.6398983], \\"type\\": \\"Point\\"}, \\"location_accuracy\\": 14.087, \\"speed\\": 0.0}, \\"device_id\\": \\"ABCDEFG-SASHA-TEST-DEVICE-ID\\", \\"type\\": \\"location\\", \\"account_id\\": \\"1\\"}",
+"Timestamp" : "2019-03-18T21:21:58.501Z",
+"SignatureVersion" : "1",
+"Signature" : "Ez/O7e3AaxOvK5Pgi/KSUW60UPOV2t7xY9vdWkaJlUd0CTdCnEmsFGN+Iw6F/OIXuAb+qEemCy0py6qUMwqw8/AU3cY8quco1Ksc4MYFdkdTAv0MjPnwgFR2i8ziaNF/d4cpyUChgKsaiscg2yoDOkf5C0WhMzhVp+jkKjRYpvgpJb2xOCUTLuWvmKRooqxKo58pYak2KzSbTGbbIaGmLNJjR5HSOLZntGT7c51WS5l4kAuWNxJ1p2nad5SLbP76FDg1GTRWKSMxl5Sn1KWKcDspiKlXvMlnSIF/kZl2YDwXucLU+C69nZopgrnUc3+6AXIEZiOC/fCzJ+SDIf9n3w==",
+"SigningCertURL" : "https://sns.us-west-2.amazonaws.com/SimpleNotificationService-6aad65c2f9911b05cd53efda11f913f9.pem",
+"UnsubscribeURL" : "https://sns.us-west-2.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-west-2:203867187697:78f6fd85-0989-4907-8db2-22688dd32c15:180ab837-4f51-475b-bb99-2d870eb32221"}```
 
 
