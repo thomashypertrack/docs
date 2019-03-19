@@ -10,7 +10,7 @@ Using Live Location on Webhooks requires the following:
 
 ## Live Location on Webhook Activation
 
-In order to activate Live Location on Webhook, please follow the steps outlined below. 
+In order to activate Live Location on Webhook, please follow the steps outlined below.
 
 ### Step 1: Webhook HTTPS Endpoint Setup 
 
@@ -31,7 +31,7 @@ Once you have confirmed the registration URL above, you will see payload that is
 "Type" : "Notification", 
 "MessageId" : "19f653e6-4a81-5c32-80c1-06ec44b77ffc",
 "TopicArn" : "arn:aws:sns:us-west-2:203867187697:78f6fd85-0989-4907-8db2-22688dd32c15",
-"Message" : "{\\"recorded_at\\": \\"2019-02-27T22:50:24.538000Z\\", \\"data\\": {\\"altitude\\": 495.2, \\"bearing\\": 90.0, \\"location\\": {\\"coordinates\\": [-6.2755, 57.6398983], \\"type\\": \\"Point\\"}, \\"location_accuracy\\": 14.087, \\"speed\\": 0.0}, \\"device_id\\": \\"ABCDEFG-SASHA-TEST-DEVICE-ID\\", \\"type\\": \\"location\\", \\"account_id\\": \\"1\\"}",
+"Message" : "[{\\"recorded_at\\": \\"2019-02-27T22:50:24.538000Z\\", \\"data\\": {\\"altitude\\": 495.2, \\"bearing\\": 90.0, \\"location\\": {\\"coordinates\\": [-6.2755, 57.6398983], \\"type\\": \\"Point\\"}, \\"location_accuracy\\": 14.087, \\"speed\\": 0.0}, \\"device_id\\": \\"ABCDEFG-SASHA-TEST-DEVICE-ID\\", \\"type\\": \\"location\\", \\"account_id\\": \\"1\\"}]",
 "Timestamp" : "2019-03-18T21:21:58.501Z",
 "SignatureVersion" : "1",
 "Signature" : "Ez/O7e3AaxOvK5Pgi/KSUW60UPOV2t7xY9vdWkaJlUd0CTdCnEmsFGN+Iw6F/OIXuAb+qEemCy0py6qUMwqw8/AU3cY8quco1Ksc4MYFdkdTAv0MjPnwgFR2i8ziaNF/d4cpyUChgKsaiscg2yoDOkf5C0WhMzhVp+jkKjRYpvgpJb2xOCUTLuWvmKRooqxKo58pYak2KzSbTGbbIaGmLNJjR5HSOLZntGT7c51WS5l4kAuWNxJ1p2nad5SLbP76FDg1GTRWKSMxl5Sn1KWKcDspiKlXvMlnSIF/kZl2YDwXucLU+C69nZopgrnUc3+6AXIEZiOC/fCzJ+SDIf9n3w==",
@@ -43,7 +43,7 @@ Once you have confirmed the registration URL above, you will see payload that is
 From the payload above, the application content in stored in the `Message` to be decoded from above:
 
 ```
-"Message" : {
+"Message" : [{
   "recorded_at": "2019-02-27T22:50:24.538000Z", 
   "data": {
     "altitude": 495.2, 
@@ -58,7 +58,9 @@ From the payload above, the application content in stored in the `Message` to be
   "device_id": "ABCDEFG-SASHA-TEST-DEVICE-ID", 
   "type": "location", 
   "account_id": "1"
-}
+}]
 ```
+### Conclusion
 
+Once you complete steps above, you will be getting Live Location on Webhook location change events for each device that belongs to you account. 
 
