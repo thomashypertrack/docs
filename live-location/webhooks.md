@@ -40,4 +40,25 @@ Once you have confirmed the registration URL above, you will see payload that is
 }
 ```
 
+From the payload above, the application content in stored in the `Message` to be decoded from above:
+
+```
+"Message" : {
+  "recorded_at": "2019-02-27T22:50:24.538000Z", 
+  "data": {
+    "altitude": 495.2, 
+    "bearing": 90.0, 
+    "location": {
+      "coordinates": [-6.2755, 57.6398983], 
+      "type": "Point"
+    }, 
+    "location_accuracy": 14.087, 
+    "speed": 0.0
+  }, 
+  "device_id": "ABCDEFG-SASHA-TEST-DEVICE-ID", 
+  "type": "location", 
+  "account_id": "1"
+}
+```
+
 
