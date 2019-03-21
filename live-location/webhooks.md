@@ -18,7 +18,21 @@ Contact us via help@hypertrack.com to let us know if you would like to configure
 
 ### Step 2: Webhook registration confirmation
 
-Live Location on Webhooks uses AWS SNS service. Once configured, after you subscribe to an endpoint, AWS SNS will send a subscription confirmation message to your endpoint. 
+Live Location on Webhooks uses AWS SNS service. Once configured, after you subscribe to an endpoint, AWS SNS will send a subscription confirmation message to your endpoint. POST body will contains JSON string with next format:
+```
+{  
+   "Type":"SubscriptionConfirmation",
+   "MessageId":"d8d25624-7752-4da9-bd5e-d40196cceeef",
+   "Token":"2336412f37fb687f5d51e6e241dbca52ec0845d5c333040effbe8ea67ca6be529e572d4602bc6f5efd235772532f1c9e2ff7811c5d1bc75edbc635273cb50461118c195cb5ad81bfadfb4704bda3f43c42e3fdf70abc1952ae30044eef5ce69b2c6a8fc6d5ec53df017092cb32177a35bd073794dcabb8e27359ef55b8ed608aeac6b2c340c8b7a7d2ea842759793254",
+   "TopicArn":"arn:aws:sns:us-west-2:203867187697:78f6fd85-0989-4907-8db2-22688dd32c15",
+   "Message":"You have chosen to subscribe to the topic arn:aws:sns:us-west-2:203867187697:78f6fd85-0989-4907-8db2-22688dd32c15.To confirm the subscription, visit the SubscribeURL included in this message.",
+   "SubscribeURL":"https://sns.us-west-2.amazonaws.com/?Action=ConfirmSubscription&TopicArn=arn:aws:sns:us-west-2:203867187697:78f6fd85-0989-4907-8db2-22688dd32c15&Token=2336412f37fb687f5d51e6e241dbca52ec0845d5c333040effbe8ea67ca6be529e572d4602bc6f5efd235772532f1c9e2ff7811c5d1bc75edbc635273cb50461118c195cb5ad81bfadfb4704bda3f43c42e3fdf70abc1952ae30044eef5ce69b2c6a8fc6d5ec53df017092cb32177a35bd073794dcabb8e27359ef55b8ed608aeac6b2c340c8b7a7d2ea842759793254",
+   "Timestamp":"2019-03-18T20:34:31.374Z",
+   "SignatureVersion":"1",
+   "Signature":"R9lQQTLMoo4REdoov/xWZJ6J8GVm3Mx+afxAGl+sGHzSIY+FXWuw3BdoAhfyMeLp7ICMrLE3D87Hwk7Kw/VgevGSFG6QmCacnf6p3t2M/Ia+pIXmPDyvV0OfqlkIK5hYWU0t5RHZ9jSLsCw7i6km31jnwBfkx68k68NynFy3xMesZf/Nxy3yN2f648ajsy7S3igE0vHOhDu+8znAfs/DN0eI3QJ7VtBC8o+pt19Q8vsalIuy/Ub6t1umbThChGNn1zkMIsNYlIC7Pil+7W1ZEM/qoKPTetMaBMFiFDRrG6/AKbNT5X2XI+jLwgJ6KK2iE8OAxECRTew/gpn+pgmVUw==",
+   "SigningCertURL":"https://sns.us-west-2.amazonaws.com/SimpleNotificationService-6aad65c2f9911b05cd53efda11f913f9.pem"
+}
+```
 
 Your endpoint implementation must retrieve the SubscribeURL value from the subscription confirmation message and either visit the location specified by the SubscribeURL itself or make it available to you so that you can manually visit the SubscribeURL. When you visit the SubscribeURL, the response will contain an XML document containing an element SubscriptionArn that specifies the ARN for the subscription.
 
