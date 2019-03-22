@@ -33,6 +33,7 @@ Live Location on Webhooks uses AWS SNS service. Once configured, after you subsc
    "SigningCertURL":"https://sns.us-west-2.amazonaws.com/SimpleNotificationService-6aad65c2f9911b05cd53efda11f913f9.pem"
 }
 ```
+**IMPORTANT:** content type will be set to `text/plain; charset=UTF-8`
 
 Your endpoint implementation must retrieve the SubscribeURL value from the subscription confirmation message and either visit the location specified by the SubscribeURL itself or make it available to you so that you can manually visit the SubscribeURL. When you visit the SubscribeURL, the response will contain an XML document containing an element SubscriptionArn that specifies the ARN for the subscription.
 
