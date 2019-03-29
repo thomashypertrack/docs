@@ -62,7 +62,7 @@ Once you have confirmed the registration URL above, you will see array of locati
 ...
 ]
 ```
-There might be multiple location events if they were pushed in shor period of time(1 second and less).
+There might be multiple location events if they were pushed in shor period of time(1 second or less).
 
 ### Conclusion
 
