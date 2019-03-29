@@ -39,7 +39,7 @@ Your endpoint implementation must retrieve the SubscribeURL value from the subsc
 
 ### Step 3: Processing Live Location on Webhooks payload
 
-Once you have confirmed the registration URL above, you will see payload in POST body:
+Once you have confirmed the registration URL above, you will see array of location events in POST body:
 
 ```
 [{
@@ -59,6 +59,7 @@ Once you have confirmed the registration URL above, you will see payload in POST
   "account_id": "1"
 }]
 ```
+There might be multiple location events if they were pushed in shor period of time(1 second and less).
 
 ### Conclusion
 
