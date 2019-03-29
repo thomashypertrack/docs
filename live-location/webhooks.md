@@ -42,7 +42,8 @@ Your endpoint implementation must retrieve the SubscribeURL value from the subsc
 Once you have confirmed the registration URL above, you will see array of location events in POST body:
 
 ```
-[{
+[
+{
   "recorded_at": "2019-02-27T22:50:24.538000Z", 
   "data": {
     "altitude": 495.2, 
@@ -57,7 +58,9 @@ Once you have confirmed the registration URL above, you will see array of locati
   "device_id": "ABCDEFG-SASHA-TEST-DEVICE-ID", 
   "type": "location", 
   "account_id": "1"
-}]
+},
+...
+]
 ```
 There might be multiple location events if they were pushed in shor period of time(1 second and less).
 
